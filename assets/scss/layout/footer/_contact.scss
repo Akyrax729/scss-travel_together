@@ -1,0 +1,22 @@
+@use "../../abstract/mixins";
+@use "../../abstract/variable" as var;
+
+#contact {
+    background-color: var.$footercolor;
+    @include mixins.flex (flex, space-between);
+    padding: 1rem;
+    color: white;
+    
+    .reseaux ul {
+        @include mixins.flex (flex, space-between);
+        margin-right: 2rem;
+
+        li {
+            padding: 1rem 0.5rem;
+
+            i {
+                font-size: 30px;
+            }
+        }
+    }
+}

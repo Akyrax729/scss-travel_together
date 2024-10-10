@@ -17,3 +17,10 @@ h3 {
     font-size: 30px;
     font-weight: 400;
 }
+a {
+    color: white;
+
+    &:hover {
+        color: var.$primarycolor;
+    }
+}
