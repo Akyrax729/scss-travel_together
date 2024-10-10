@@ -35,3 +35,23 @@
     margin-top: -230px;
     z-index: 1;
 }
+
+@media screen and (max-width:700px) {
+    #get_in_touch {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-bottom: 1rem;
+
+        .git_text {
+            margin: 1rem 0 2rem 0;
+            padding: 1rem 0.5rem;
+            width: 100%;
+
+            p {
+                max-width: 90%;
+            }
+        }
+    }
+}

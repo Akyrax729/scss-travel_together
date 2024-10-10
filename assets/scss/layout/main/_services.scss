@@ -6,6 +6,7 @@
 
     h2 {
         padding-left: 1rem;
+        padding-bottom: 1rem;
     }
     .services_cards {
         display: grid;
@@ -52,4 +53,20 @@
             content: ">";
         }
     }
+}
+
+@media screen and (max-width:450px) {
+    #services {
+
+        .services_cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 30vh 30vh 30vh;
+            grid-template-areas: 
+            "a"
+            "b"
+            "c";
+        }
+    }
+
 }

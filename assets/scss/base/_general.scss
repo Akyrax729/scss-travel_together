@@ -24,3 +24,9 @@ a {
         color: var.$primarycolor;
     }
 }
+
+@media screen and (max-width:450px){
+    h2 {
+        font-size: 25px;
+    }
+}
