@@ -1,0 +1,33 @@
+@use "../abstract/mixins";
+@use "../abstract/variable" as var;
+
+.nav_bar {
+    @include mixins.flex (flex,space-between);
+
+    img{
+        padding: 1rem 2rem;
+        height: 2rem;
+    }
+    ul {
+        @include mixins.flex;
+
+        li {
+            padding: 1rem 2rem;
+
+            &:first-child {
+                font-weight: 700;
+            }
+
+            a {
+                color: #000;
+
+                &:hover {
+                    color: var.$primarycolor;
+                }
+            }
+        }
+    }
+}
+footer .nav_bar ul li a{
+    color: white;
+}

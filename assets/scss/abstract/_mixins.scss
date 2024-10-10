@@ -1,0 +1,27 @@
+@mixin flex ($display:flex, $justify:center, $align:center, $direction:row, $wrap:nowrap){
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin button {
+    color: black;
+    background-color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px;
+
+    &::after {
+        padding-left: 0.5rem;
+        content: ">";
+    }
+
+    &:hover {
+        color: white;
+        background-color: black;
+    }
+}

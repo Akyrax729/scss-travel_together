@@ -1,0 +1,40 @@
+@use "../../abstract/mixins";
+@use "../../abstract/variable" as var;
+
+#banner_header {
+    background-color:  var.$primarycolor;
+    color: white;
+    @include mixins.flex (flex, flex-start, center);
+    position: relative;
+    padding: 4rem;
+    padding-left: 2rem;
+    overflow: hidden;
+    height: 40vh;
+    border-radius: 20px;
+    box-shadow: 0 0 10px black;
+
+    .banner_text {
+        @include mixins.flex (flex, center, flex-start, column);
+        max-width: 65%;
+
+        h2 {
+            padding-bottom: 2rem;
+        }
+        p {
+            padding-bottom: 2rem;
+        }
+    }
+    img {
+        position: absolute;
+        right: 10vw;
+        bottom: -70px;
+        // height: 50vh;
+        width: 15vw;
+        min-width: 200px;
+    }
+    .btn {
+        @include mixins.button;
+        @include mixins.flex;
+        margin-top: auto;
+    }
+}
