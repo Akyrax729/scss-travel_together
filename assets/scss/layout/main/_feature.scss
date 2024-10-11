@@ -10,7 +10,7 @@
         background-image: url(../img/wave.svg);
         background-size: cover;
         background-repeat: no-repeat;
-        padding-bottom: 8rem;
+        padding-bottom: 12rem;
     }
     .feature_cards {
         @include mixins.flex;
