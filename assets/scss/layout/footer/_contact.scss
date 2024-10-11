@@ -1,15 +1,23 @@
 @use "../../abstract/mixins";
 @use "../../abstract/variable" as var;
 
+
 #contact {
     background-color: var.$footercolor;
-    @include mixins.flex (flex, space-between);
-    padding: 1rem;
-    color: white;
     
+    padding: 1rem 5vw;
+    color: white;
+    margin-top: -1px;
+    
+    .contact {
+        padding-top: 1rem;
+        border-top: 1px solid lightslategray;
+        @include mixins.flex (flex, space-between);
+    }
     .reseaux ul {
         @include mixins.flex (flex, space-between);
         margin-right: 2rem;
+        
 
         li {
             padding: 1rem 0.5rem;
@@ -23,11 +31,15 @@
 
 @media screen and (max-width:700px){
     #contact {
-        justify-content: center;
-        flex-wrap: wrap;
-        text-align: center;
-        div {
-            padding: 1rem;
+
+        .contact {
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+            
+            div {
+                padding: 1rem;
+            }
         }
         .reseaux ul {
             margin-right: 0;

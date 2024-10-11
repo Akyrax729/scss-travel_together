@@ -3,7 +3,7 @@
 
 #get_in_touch {
     background-color: var.$primarycolor;
-    margin: 0 10vw;
+    margin: 0 5vw;
     border-radius: 20px;
     @include mixins.flex (flex, space-between);
     position: relative;
@@ -33,6 +33,7 @@
     height: 270px;
     width: 100%;
     margin-top: -230px;
+    margin-bottom: -5px;
     z-index: 1;
 }
 

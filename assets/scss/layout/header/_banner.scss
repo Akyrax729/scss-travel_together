@@ -9,13 +9,12 @@
     padding: 4rem;
     padding-left: 2rem;
     overflow: hidden;
-    height: 40vh;
     border-radius: 20px;
     box-shadow: 0 0 10px black;
 
     .banner_text {
         @include mixins.flex (flex, center, flex-start, column);
-        max-width: 65%;
+        max-width: 55%;
 
         h2 {
             padding-bottom: 2rem;
@@ -28,7 +27,6 @@
         position: absolute;
         right: 10vw;
         bottom: -70px;
-        // height: 50vh;
         width: 15vw;
         min-width: 200px;
     }
@@ -39,7 +37,17 @@
     }
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:1000px) {
+    #banner_header {
+        img {
+            right: 5vw;
+            bottom: 20%;
+        }
+    }
+}
+
+
+@media screen and (max-width:700px) {
     #banner_header {
         height: auto;
         padding-left: 0;

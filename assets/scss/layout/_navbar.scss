@@ -6,37 +6,55 @@
     @include mixins.flex (flex,space-between);
 
     img{
-        padding: 1rem 2rem;
-        height: 2rem;
+        padding: 1rem 0;
+        height: 3rem;
     }
 
     nav {
         @include mixins.flex;
 
-        div {
+        .carre_burger {
+            border: 1px solid #535353;
+            padding: 18px 5px;
+        }
+        .burger {
             display: none;
-            height: 3px;
-            width: 20px;
-            background-color: rgb(0, 0, 0);
+            height: 4px;
+            width: 35px;
+            background-color: #535353;
+            border-radius: 20px;
             position: relative;
         
             &::before {
                 content: "";
                 position: absolute;
-                background-color: rgb(0, 0, 0);
-                height: 3px;
-                width: 20px;
-                top: -6px;
+                background-color: inherit;
+                height: inherit;
+                width: inherit;
+                border-radius: inherit;
+                top: -8px;
                 transition: all 0.3s;
             }
             &::after {
                 content: "";
                 position: absolute;
-                background-color: rgb(0, 0, 0);
-                height: 3px;
-                width: 20px;
-                top: 6px;
+                background-color: inherit;
+                height: inherit;
+                width: inherit;
+                border-radius: inherit;
+                top: 8px;
                 transition: all 0.3s;
+            }
+            &:hover {
+                background-color: white;
+            }
+            &:hover::before {
+                transform: rotate(315deg);
+                top: 0;
+            }
+            &:hover::after {
+                transform: rotate(-315deg);
+                top: 0;
             }
         }
     }
@@ -62,9 +80,17 @@
 }
 footer .nav_bar {
     background-color: var.$footercolor;
+    padding: 0 5vw;
 
-    ul li a{
-        color: white;
+    ul {
+        li {
+            &:first-child {
+                font-weight: 400;
+            }
+            a{
+                color: white;
+            }
+        } 
     }
 }
 
@@ -72,42 +98,14 @@ footer .nav_bar {
 
     header .nav_bar {
 
-        nav div {
+        nav .burger {
             display: block;
-            height: 6px;
-            width: 40px;
-            background-color: rgb(0, 0, 0);
-            position: relative;
-            margin-right: 6rem;
 
-            &::before {
-                content: "";
-                position: absolute;
-                background-color: rgb(0, 0, 0);
-                height: 6px;
-                width: 40px;
-                top: -12px;
-                transition: all 0.3s;
+            &:before {
+                background-color: #535353;
             }
             &::after {
-                content: "";
-                position: absolute;
-                background-color: rgb(0, 0, 0);
-                height: 6px;
-                width: 40px;
-                top: 12px;
-                transition: all 0.3s;
-            }            
-            &:hover {
-                background-color: white;
-            }
-            &:hover::before {
-                transform: rotate(315deg);
-                top: 0;
-            }
-            &:hover::after {
-                transform: rotate(-315deg);
-                top: 0;
+                background-color: #535353;
             }
         }
         ul {

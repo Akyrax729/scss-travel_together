@@ -1,2 +1,7 @@
+@use "../abstract/variable" as var;
 @use "footer/getintouch";
 @use "footer/contact";
+
+footer {
+    background-color: var.$featurecolor;
+}
